@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+	
+	<hibernate-configuration>
+	    
+	    <session-factory>
+	        
+	        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	        <property name="connection.url">jdbc:mysql://localhost:3306/akshay?useSSL=False</property>
+	        <property name="connection.username">root</property>
+	        <property name="connection.password">Akshay@2409</property>
+	        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	        <property name="hbm2ddl.auto">update</property>
+	        <property name="show_sql">true</property>
+	        <property name="format_sql">true</property>	        
+	        
+	        <mapping class="com.servlet.Add"/>
+	        <mapping class="com.servlet.Search"/>
+	        <mapping class="com.servlet.DeleteEmp"/>
+	        <mapping class="com.servlet.UpdateEmp"/>
+	        <mapping class="com.servlet.LoginEmp"/>
+	        
+	        
+	        <mapping class="com.dao.User"/>
+	        <mapping class="com.dao.Update"/>
+	        <mapping class="com.dao.SearchEmp"/>
+	        <mapping class="com.dao.EmployeeSkills"/>
+	        <mapping class="com.dao.Display"/>
+	        <mapping class="com.dao.Delete"/>
+	       
+	       
+	        
+	        <mapping class="com.provider.FactoryProvider"/>
+	        
+	    </session-factory>
+	    
+	</hibernate-configuration>
